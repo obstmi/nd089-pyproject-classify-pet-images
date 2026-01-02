@@ -43,6 +43,9 @@ def main():
     # TODO 0: Measures total program runtime by collecting start time
     start_time = time()
 
+    # Simulate code execution for debugging purposes:
+    # sleep(15)
+
     # TODO 1: Define get_input_args function within the file get_input_args.py
     # This function retrieves 3 Command Line Arugments from user as input from
     # the user running the program from a terminal window. This function returns
@@ -117,12 +120,7 @@ def main():
     # TODO 0: Computes overall runtime in seconds & prints it in hh:mm:ss format
     tot_time = end_time - start_time
     print(
-        "\n** Total Elapsed Runtime:",
-        str(int((tot_time / 3600)))
-        + ":"
-        + str(int((tot_time % 3600) / 60))
-        + ":"
-        + str(int((tot_time % 3600) % 60)),
+        f"\n** Total Elapsed Runtime: {int(tot_time // 3600):02d}:{int((tot_time % 3600) // 60):02d}:{int(tot_time % 60):02d}"
     )
 
 

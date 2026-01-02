@@ -1,0 +1,7 @@
+# This does not work with Intel-Mac and Python 3.14:
+# 'pip3 install torch torchvision' or 'pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cpu'
+# For Intel-Mac with Python 3.14 use Conda and Python 3.12
+
+torch==2.2.1
+torchvision==0.17.1
+pillow==10.2.0
