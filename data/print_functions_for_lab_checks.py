@@ -95,7 +95,8 @@ def check_classifying_images(results_dic):
      Nothing - just prints to console  
 
     """
-    if results_dic is None:
+    # if results_dic is None:
+    if not results_dic:  # more robust check for None or empty dictionary
         print("* Doesn't Check the Results Dictionary because 'classify_images' hasn't been defined.")
     elif len(results_dic[next(iter(results_dic))]) < 2:
         print("* Doesn't Check the Results Dictionary because 'classify_images' hasn't been defined.")
@@ -160,7 +161,8 @@ def check_classifying_labels_as_dogs(results_dic):
      Nothing - just prints to console  
 
     """
-    if results_dic is None:
+    # if results_dic is None:
+    if not results_dic:  # more robust check for None or empty dictionary
         print("* Doesn't Check the Results Dictionary because 'adjust_results4_isadog' hasn't been defined.")
     elif len(results_dic[next(iter(results_dic))]) < 4 :
         print("* Doesn't Check the Results Dictionary because 'adjust_results4_isadog' hasn't been defined.")
