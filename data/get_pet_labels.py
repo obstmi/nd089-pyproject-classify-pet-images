@@ -18,6 +18,7 @@
 ##
 # Imports python modules
 from os import listdir, path
+import re
 
 
 # TODO 2: Define get_pet_labels function below please be certain to replace None
@@ -68,16 +69,19 @@ def get_pet_labels(image_dir):
             low_pet_image = in_files[idx].lower()
 
             # Splits lower case string by _ to break into words
-            word_list_pet_image = low_pet_image.split("_")
+            # word_list_pet_image = low_pet_image.split("_")
+            # Also use "." as separator
+            word_list_pet_image = re.split(r"[_.]", low_pet_image)
 
+            # define image file extensions to be excluded from pet label
+            image_extensions = {"jpg", "jpeg", "png", "gif", "bmp", "tiff"}
             # Loops through each word in the pet name list found above
             for word in word_list_pet_image:
 
                 # Checks if word is only alphabetic characters - if true append
                 # word to pet_label separated by trailing space
-                if word.isalpha():
+                if word.isalpha() and not word in image_extensions:
                     pet_label += word + " "
-
             # Strips off starting/trailing whitespace characters from pet_label
             pet_label = pet_label.strip()
 
