@@ -1,0 +1,80 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Dog_01.jpg  label:                        dog
+ 2 key:                     Dog_02.jpg  label:                        dog
+ 3 key:                Racing_bike.jpg  label:                racing bike
+ 4 key:               Indian_Cobra.jpg  label:               indian cobra
+Classifying image: uploaded_images/Dog_01.jpg
+Classifying image: uploaded_images/Dog_02.jpg
+Classifying image: uploaded_images/Racing_bike.jpg
+Classifying image: uploaded_images/Indian_Cobra.jpg
+
+     MATCH:
+
+              Indian_Cobra.jpg: 
+Real:               indian cobra   Classifier:        indian cobra, naja naja
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:      vizsla, hungarian pointer
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:              italian greyhound
+
+               Racing_bike.jpg: 
+Real:                racing bike   Classifier: mountain bike, all-terrain bike, off-roader
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+     MATCH:
+
+              Indian_Cobra.jpg: 
+Real:               indian cobra   Classifier:        indian cobra, naja naja  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:      vizsla, hungarian pointer  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:              italian greyhound  
+PetLabelDog: 1  ClassLabelDog: 1
+
+               Racing_bike.jpg: 
+Real:                racing bike   Classifier: mountain bike, all-terrain bike, off-roader  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+Number of Images    :   4
+Number of Dog Images:   2
+Number of Not-Dog Images:   2
+ 
+pct_match           : 25.00
+pct_correct_dogs    : 100.00
+pct_correct_breed   : 0.00
+pct_correct_notdogs : 100.00
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:      vizsla, hungarian pointer
+Real:                        dog   Classifier:              italian greyhound
+
+** Total Elapsed Runtime: 00:00:01
